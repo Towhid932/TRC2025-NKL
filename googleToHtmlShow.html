@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+  <title>Submitted List</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    table{
+      width: 100%; 
+      font-size: 8px;
+    }
+    tr{
+      height: 10px;
+      border-bottom: 1px solid black;}
+    td{
+      padding: 2px;
+    }
+    tr:nth-child(n){
+      background-color: whitesmoke;;
+    }
+    tr:nth-child(even) {
+      background-color: rgba(150, 212, 212, 0.4);
+    }
+    tr td:nth-child(5), td:nth-child(6), td:nth-child(7), td:nth-child(8), td:nth-child(9){
+      text-align: center;
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="hedar">
+      <div class="hleft">
+        <img src="img/police_logo.png" alt="BD Police" class="logo">
+      </div>
+      <div class="hmid">
+        <h1>Trainee Recruit Constable Recruitment, January 2024</h1>
+      <h2>NOAKHALI</h2>
+      </div>
+      <div class="hright">
+        <img src="img/nkllogo.jpg" alt="NKL" class="logo">
+      </div>
+    </div>
+      <div class="text-wrapper">
+          <span>বার্তা</span>
+        <marquee scrollamount="4">ট্রেইনি রিক্রুট কনস্টেবল (টিআরসি) নিয়োগ, জানুয়ারি ২০২৪খ্রি. এর মেধাতালিকাভূক্ত ও অপেক্ষামান সবাই তথ্য সাবমিট করায়  রিজার্ভ অফিস, নোয়াখালীর পক্ষ থেকে আপনাদেরকে শুভেচ্ছা ও অভিনন্দন। কোন সমস্য বা না বুঝলে ০১৬৪১৬৬৩৫৯৬ নাম্বারে যোগাযোগ করুন। ধন্যবাদ.....</marquee>
+ 
+      </div>
+      
+    <nav>
+<button class="button button2"><a href="index.html">
+  Home
+</a></button>
+<button class="button button5">Red</button>
+<button class="button button5">Gray</button>
+<button class="button button5">Black</button>
+    </nav>
+    
+    <h4>Data Submitted List, TRC 2024, Noakhali</h4>
+
+    <table>
+      
+    
+  </table>
+    
+     <footer>
+          <div class="footer">
+            <div class="row">
+              <a href="https://www.facebook.com/Towhid261?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+    
+            <div class="row">
+              <ul>
+                <li><a href="#" class="btn--show-modal">Contact us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Career</a></li>
+              </ul>
+            </div>
+    
+            <div class="row">
+              TRC_NKL Copyright © 2024 TRC_NKL - All rights reserved || Designed By: Md. Towhidul Islam <br>Contact no:01641663596
+            </div>
+          </div>
+        </footer>
+        </div>
+        <!--modal-->
+        <div class="modal hidden">
+          <button class="btn--close-modal">&times;</button>
+          <!--card -->
+    
+          <div class="card-container">
+            <div class="card-image">
+              <img src="img/towhid.JPG" alt="TOWHID">
+            </div>
+            <div class="card-details">
+              <h2>MD. TOWHIDUL ISLAM</h2>
+              <p class="designation">Web Devloper</p>
+              <p>Office, Noakhali</p>
+              <p>Banglades Police</p>
+              <a href="#">Contact: 01641663596</a>
+            </div>
+          </div>
+  </div>
+  <script>
+        fetch('https://script.google.com/macros/s/AKfycbxOtpcVj6uX010D1Oxyc4EZnXHjSVXv6KoCqiRRfYBIb1qOPBpT2rjiI0yLEazOSk4z/exec')
+        .then(res => res.json())
+    .then(data => {
+      let tr = data. content. reduce((prev,cur)=>
+      {
+        let td =cur.map(e=>`<td>${e}</td>`)
+        return prev + `<tr>${td.join("")}</tr>`
+      },"\r")
+      document.querySelector("table").innerHTML =
+      tr;
+      console.log(tr);
+    });
+  </script>
+
+</body>
+
+</html>
